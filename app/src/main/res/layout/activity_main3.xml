@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:layoutDirection="ltr"
+    android:orientation="vertical"
+    tools:context="com.example.allahoakbar1.mymovie.Main2Activity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:background="@color/mcolor">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            android:background="@color/mcolor">
+
+            <ImageView
+                android:id="@+id/poster_image"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/poster_image">
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/namelable"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_toRightOf="@+id/poster_image"
+                android:text=" Name: "
+                android:textColor="@color/White"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <ScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/namelable">
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/namelable"
+                    android:paddingTop="4dp"
+                    android:text=" name"
+                    android:textColor="@color/White"
+                    android:textStyle="italic" />
+            </ScrollView>
+
+
+            <TextView
+                android:id="@+id/languagelable"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_below="@+id/namelable"
+                android:layout_toRightOf="@id/poster_image"
+                android:text=" Langu: "
+                android:textColor="@color/White"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/language"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/namelable"
+                android:layout_toRightOf="@id/languagelable"
+                android:paddingTop="4dp"
+                android:text="language"
+                android:textColor="@color/White"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/relase_datelable"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_below="@id/languagelable"
+                android:layout_toRightOf="@id/poster_image"
+                android:text=" Date: "
+                android:textColor="@color/White"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/relase_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/languagelable"
+                android:layout_toRightOf="@+id/relase_datelable"
+                android:paddingTop="4dp"
+                android:text=" relase date"
+                android:textAlignment="center"
+                android:textColor="@color/White"
+                android:textStyle="italic" />
+
+
+            <RatingBar
+                android:id="@+id/rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@id/relase_date"
+                android:layout_centerHorizontal="true"
+                android:layout_toRightOf="@id/poster_image"
+                android:max="10"
+                android:rating="2.0"
+                android:theme="@style/RatingBar" />
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:background="@color/mcolor"
+        >
+
+
+        <TextView
+            android:id="@+id/overview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Overview"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="italic|bold" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/overview">
+
+            <TextView
+                android:id="@+id/over_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="over view (description)"
+                android:textSize="18dp"
+                android:textColor="@color/green"
+                />
+
+        </ScrollView>
+    </RelativeLayout>
+
+
+    <ListView
+        android:id="@+id/list_trailers"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:background="@color/mcolor">
+
+    </ListView>
+</LinearLayout>
